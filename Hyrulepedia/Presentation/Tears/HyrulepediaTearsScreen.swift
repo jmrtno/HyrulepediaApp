@@ -26,6 +26,14 @@ public struct HyrulepediaTearsScreen: View {
             overlay
         }
         .environmentObject(viewModel)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(viewModel.listCategory.capitalized)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+            }
+        }
         .task {
             await viewModel.notifyAppearance()
         }

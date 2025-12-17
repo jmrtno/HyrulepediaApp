@@ -27,6 +27,14 @@ struct HyrulepediaBreathScreen: View {
             overlay
         }
         .environmentObject(viewModel)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(viewModel.listCategory.capitalized)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+            }
+        }
         .task {
             await viewModel.notifyAppearance()
         }
@@ -60,8 +68,6 @@ private extension HyrulepediaBreathScreen {
     struct BackgroundView: View {
         var body: some View {
             ZStack {
-                Color.black
-                    .ignoresSafeArea()
                 LinearGradient(
                     gradient: Gradient(colors: [Color.black,
                                                 Color.black,
