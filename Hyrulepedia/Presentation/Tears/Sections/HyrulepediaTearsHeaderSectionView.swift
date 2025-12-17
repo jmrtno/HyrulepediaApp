@@ -1,11 +1,3 @@
-//
-//  HyrulepediaTearsHeaderSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
-
 import Combine
 import SwiftUI
 

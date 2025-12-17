@@ -1,15 +1,10 @@
-//
-//  HyrulepediaBreathFooterSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
 import Combine
 import Kingfisher
 import SwiftUI
 
 struct HyrulepediaDetailImageSectionView: View {
+
+    // MARK: Modular variables
     
     @EnvironmentObject var viewModel: HyrulepediaDetailViewModel
     
@@ -17,6 +12,8 @@ struct HyrulepediaDetailImageSectionView: View {
         contentView
     }
 }
+
+// MARK: - Private UI
 
 private extension HyrulepediaDetailImageSectionView {
     @ViewBuilder

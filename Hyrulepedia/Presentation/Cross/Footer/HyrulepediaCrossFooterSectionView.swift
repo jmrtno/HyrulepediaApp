@@ -1,11 +1,3 @@
-//
-//  HyrulepediaCrossFooterSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 11/12/25.
-//
-
-
 import Combine
 import SwiftUI
 
@@ -13,11 +5,15 @@ import SwiftUI
 
 /// Generic, reusable footer section
 struct HyrulepediaCrossFooterSectionView<VM: HyrulepediaCrossFooterSectionContract>: View {
+    
+    // MARK: Modular Variable
     @EnvironmentObject var viewModel: VM
 
-    @SwiftUI.State private var pickerCategories: PickerCategories = .creatures
-    @SwiftUI.State private var searchText = ""
-    @Environment(\.colorScheme) private var colorScheme
+    // MARK: Environment & State
+    @Environment(\.colorScheme)
+    private var colorScheme
+    @State private var pickerCategories: PickerCategories = .creatures
+    @State private var searchText = ""
 
     var body: some View {
         contentView

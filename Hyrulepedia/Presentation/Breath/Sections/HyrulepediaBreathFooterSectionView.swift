@@ -1,21 +1,16 @@
-//
-//  HyrulepediaBreathFooterSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
 import Combine
 import SwiftUI
 
 struct HyrulepediaBreathFooterSectionView: View {
-    
+    // MARK: Modular Variable
     @EnvironmentObject var viewModel: HyrulepediaBreathViewModel
     
-    @SwiftUI.State private var pickerCategories: PickerCategories = .creatures
-    @SwiftUI.State private var searchText = ""
+    // MARK: Environments & State
     
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme)
+    private var colorScheme
+    @State private var pickerCategories: PickerCategories = .creatures
+    @State private var searchText = ""
     
     var body: some View {
         contentView
@@ -27,6 +22,8 @@ struct HyrulepediaBreathFooterSectionView: View {
             }
     }
 }
+
+// MARK: - Private UI
 
 private extension HyrulepediaBreathFooterSectionView {
     @ViewBuilder

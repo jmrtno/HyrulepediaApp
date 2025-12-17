@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 28/11/25.
-//
-
 import SwiftUI
 
 /// Screen for the `HyrulepediaDetail` .
