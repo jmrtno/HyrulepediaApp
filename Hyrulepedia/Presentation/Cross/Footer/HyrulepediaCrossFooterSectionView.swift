@@ -13,13 +13,9 @@ struct HyrulepediaCrossFooterSectionView<VM: HyrulepediaCrossFooterSectionContra
     @Environment(\.colorScheme)
     private var colorScheme
     @State private var pickerCategories: PickerCategories = .creatures
-    @State private var searchText = ""
 
     var body: some View {
         contentView
-            .onChange(of: searchText) { _, newValue in
-                viewModel.searchText = newValue
-            }
             .onChange(of: pickerCategories) { _, newValue in
                 viewModel.listCategory = newValue.rawValue
             }
@@ -30,23 +26,13 @@ private extension HyrulepediaCrossFooterSectionView {
     @ViewBuilder
     var contentView: some View {
         if !viewModel.isLoading {
-            VStack {
-                getSearchBar()
-                getCategorySelector()
-            }
-            .padding()
+            getCategorySelector()
+                .searchable(text: $viewModel.searchText,
+                            prompt: Text("Search in Hyrulepedia"))
+                .padding(.horizontal)
         } else {
             EmptyView()
         }
-    }
-
-    @ViewBuilder
-    func getSearchBar() -> some View {
-        TextField(text: $searchText, label: {
-            Text("Search")
-                .foregroundColor(.white)
-        })
-        .foregroundColor(.white)
     }
 
     @ViewBuilder
@@ -72,7 +58,7 @@ private extension HyrulepediaCrossFooterSectionView {
         .background(backgroundColorSegmentedControl)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .onChange(of: pickerCategories) {
-            searchText = ""
+            viewModel.searchText = ""
         }
     }
 }
