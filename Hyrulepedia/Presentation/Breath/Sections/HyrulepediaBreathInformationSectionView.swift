@@ -48,11 +48,6 @@ private extension HyrulepediaBreathInformationSectionView {
             .sorted { $0.id < $1.id }
         
         VStack (alignment: .center) {
-            Text(selectedCategory.capitalized)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .frame(alignment: .leading)
             ForEach(filteredAndSearchedItems, id: \.id) { item in
                 getItemView(item: item)
                     .padding(.bottom, 20)

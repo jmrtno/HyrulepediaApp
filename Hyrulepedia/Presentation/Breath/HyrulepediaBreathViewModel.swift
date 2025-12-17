@@ -13,7 +13,7 @@ final class HyrulepediaBreathViewModel: ObservableObject, HyrulepediaCrossFooter
     // MARK: - Published
 
     /// Currently selected category name for the Breath section.
-    @Published public var listCategory = ""
+    @Published public var listCategory = "Creatures"
     /// Current search query text entered by the user.
     @Published public var searchText = ""
     /// Indicates whether a data load operation is in progress.
@@ -74,11 +74,12 @@ final class HyrulepediaBreathViewModel: ObservableObject, HyrulepediaCrossFooter
     ///         If no category is selected, this method will default it to the first item's category.
     func loadData(gameId: String) async {
         self.isLoading = true
+        self.listCategory = ""
         self.isError = false
         do {
             let fetched = try await self.useCase.getItems(gameId: gameId)
             self.items = fetched
-            if self.listCategory.isEmpty, let firstCategory = fetched.first?.category {
+            if let firstCategory = fetched.first?.category {
                 self.listCategory = firstCategory
             }
             self.isLoading = false
