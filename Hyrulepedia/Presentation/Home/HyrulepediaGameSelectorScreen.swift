@@ -1,11 +1,3 @@
-//
-//  HyrulepediaGameSelectorScreen.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
-
 import SwiftUI
 
 struct HyrulepediaGameSelectorScreen: View {

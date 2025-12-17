@@ -1,21 +1,16 @@
-//
-//  HyrulepediaTearsFooterSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
 import Combine
 import SwiftUI
 
 struct HyrulepediaTearsFooterSectionView: View {
-    
+    // MARK: Modular Variable
     @EnvironmentObject var viewModel: HyrulepediaTearsViewModel
     
-    @SwiftUI.State private var pickerCategories: PickerCategories = .creatures
-    @SwiftUI.State private var searchText = ""
-    
-    @Environment(\.colorScheme) var colorScheme
+    // MARK: Environments & State
+
+    @Environment(\.colorScheme)
+    private var colorScheme
+    @State private var pickerCategories: PickerCategories = .creatures
+    @State private var searchText = ""
     
     var body: some View {
         contentView

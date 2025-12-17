@@ -6,24 +6,24 @@ final class NavigationCoordinator: ObservableObject {
     @Published var path = NavigationPath()
     @Published var root: AppRoute = .gameSelector
 
-    // Push a new route
+    /// Push a new route
     func push(_ route: AppRoute) {
         path.append(route)
     }
 
-    // Replace the whole stack with a new root
+    /// Replace the whole stack with a new root
     func setRoot(_ route: AppRoute) {
         root = route
         path = NavigationPath()
     }
 
-    // Pop last
+    /// Pop last
     func pop() {
         guard !path.isEmpty else { return }
         path.removeLast()
     }
 
-    // Pop to root
+    /// Pop to root
     func popToRoot() {
         path = NavigationPath()
     }

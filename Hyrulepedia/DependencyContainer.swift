@@ -1,20 +1,14 @@
-//
-//  DependencyContainer.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 28/11/25.
-//
 import Foundation
 import SwiftUI
 
 enum DomainDependencies {
-    // Network
+    /// Network
     static let network: NetworkService = DefaultNetworkService()
 
-    // Repository
+    /// Repository
     static let zeldaRepository = HyrulepediaRepository(network: network)
 
-    // UseCases
+    /// UseCases
     static let getAllItemsUseCase: GetAllItemsUseCaseContract =
         GetAllItemsUseCase(repository: zeldaRepository)
 
@@ -24,6 +18,6 @@ enum DomainDependencies {
 }
 
 enum PresentationDependencies {
-    // Navigation
+    /// Navigation
     static let navigationCoordinator = NavigationCoordinator()
 }

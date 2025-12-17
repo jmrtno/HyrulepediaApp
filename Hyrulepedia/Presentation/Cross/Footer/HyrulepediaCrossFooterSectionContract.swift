@@ -1,10 +1,3 @@
-//
-//  HyrulepediaCrossFooterSectionContract.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 11/12/25.
-//
-
 import Combine
 
 /// A lightweight contract for `HyrulepediaCrossFooterSectionView`

@@ -1,19 +1,3 @@
-//
-//  HyrulepediaBreathLoaderSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 11/12/25.
-//
-
-
-//
-//  HyrulepediaBreathLoaderSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
-
 import Combine
 import SwiftUI
 
@@ -22,8 +6,8 @@ struct HyrulepediaDetailLoaderSectionView: View {
     @EnvironmentObject var viewModel: HyrulepediaDetailViewModel
 
     // MARK: Environments & State
-    @SwiftUI.State private var degrees = 0.0
-    @SwiftUI.State private var isAnimating: Bool = false
+    @State private var degrees = 0.0
+    @State private var isAnimating: Bool = false
     
     var body: some View {
         loaderContainer
@@ -52,17 +36,17 @@ private extension HyrulepediaDetailLoaderSectionView {
             }
     }
 
-    private func startInfiniteAnimation() {
-        guard !isAnimating else { return }  // Evitar múltiples animaciones simultáneas
+    func startInfiniteAnimation() {
+        guard !isAnimating else { return }
         isAnimating = true
-        let interval: Double = 0.05  // Intervalo de actualización de la animación
-        let increment: Double = 7  // Incremento de grados por cada intervalo
+        let interval: Double = 0.05
+        let increment: Double = 7
 
         Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
             withAnimation(.easeIn(duration: interval)) {
                 degrees += increment
             }
-            // Reset degrees to avoid overflow
+            /// Reset degrees to avoid overflow
             if degrees >= 360 {
                 degrees -= 360
             }

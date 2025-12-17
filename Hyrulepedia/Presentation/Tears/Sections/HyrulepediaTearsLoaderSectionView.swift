@@ -1,11 +1,5 @@
 //
 //  HyrulepediaTearsLoaderSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
-
 import Combine
 import SwiftUI
 
@@ -14,8 +8,8 @@ struct HyrulepediaTearsLoaderSectionView: View {
     @EnvironmentObject var viewModel: HyrulepediaTearsViewModel
 
     // MARK: Environments & State
-    @SwiftUI.State private var degrees = 0.0
-    @SwiftUI.State private var isAnimating: Bool = false
+    @State private var degrees = 0.0
+    @State private var isAnimating: Bool = false
     
     var body: some View {
         loaderContainer

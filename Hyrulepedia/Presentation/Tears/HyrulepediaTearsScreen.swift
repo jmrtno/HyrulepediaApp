@@ -1,10 +1,3 @@
-//
-//  HyrulepediaTearsScreen.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 30/11/25.
-//
-
 import SwiftUI
 /// Screen for the `HyrulepediaTears`.
 ///

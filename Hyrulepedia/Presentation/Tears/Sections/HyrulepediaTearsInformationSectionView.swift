@@ -1,11 +1,3 @@
-//
-//  HyrulepediaTearsInformationSectionView.swift
-//  Hyrulepedia
-//
-//  Created by Javier Martín on 29/11/25.
-//
-
-
 import Combine
 import Kingfisher
 import SwiftUI
@@ -13,6 +5,9 @@ import SwiftUI
 struct HyrulepediaTearsInformationSectionView: View {
     // MARK: Modular Variable
     @EnvironmentObject var viewModel: HyrulepediaTearsViewModel
+    
+    // MARK: Environments & State
+    
     @State private var selectedItem: HyrulepediaDataEntity? = nil
     
     private var selectedCategory: String {
