@@ -55,7 +55,7 @@ public struct HyrulepediaTearsScreen: View {
     }
     /// Loading overlay.
     private var overlay: some View {
-        HyrulepediaTearsLoaderSectionView()
+        HyrulepediaCrossLoaderSectionView<HyrulepediaTearsViewModel>()
     }
 }
 

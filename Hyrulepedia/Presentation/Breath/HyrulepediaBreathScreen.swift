@@ -56,7 +56,7 @@ struct HyrulepediaBreathScreen: View {
     }
     /// Loading overlay.
     private var overlay: some View {
-        HyrulepediaBreathLoaderSectionView()
+        HyrulepediaCrossLoaderSectionView<HyrulepediaBreathViewModel>()
     }
 }
 
@@ -69,15 +69,15 @@ private extension HyrulepediaBreathScreen {
         var body: some View {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.black,
-                                                Color.black,
-                                                Color.black,
-                                                Color(red: 0.5,
-                                                      green: 0,
-                                                      blue: 0)]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
+                    gradient: Gradient(
+                        colors: [Color.black,
+                                 Color.black,
+                                 Color.black,
+                                 Color(red: 0.5,
+                                       green: 0,
+                                       blue: 0)]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing)
                 Image("bgTexture")
                     .resizable()
             }

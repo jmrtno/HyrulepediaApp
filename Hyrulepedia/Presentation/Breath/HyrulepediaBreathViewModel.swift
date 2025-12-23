@@ -8,7 +8,9 @@ import SwiftUI
 /// This type is annotated with `@MainActor` because it updates `@Published`
 /// properties that drive SwiftUI views.
 @MainActor
-final class HyrulepediaBreathViewModel: ObservableObject, HyrulepediaCrossFooterSectionContract {
+final class HyrulepediaBreathViewModel: ObservableObject,
+                                        HyrulepediaCrossFooterSectionContract,
+                                        HyrulepediaCrossLoaderSectionContract {
 
     // MARK: - Published
 
