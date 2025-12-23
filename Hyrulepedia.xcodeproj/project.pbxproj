@@ -26,7 +26,6 @@
 		ED68A1262EDA110E00C3DCC7 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1252EDA110E00C3DCC7 /* DependencyContainer.swift */; };
 		ED68A1282EDB022900C3DCC7 /* HyrulepediaGameSelectorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1272EDB022900C3DCC7 /* HyrulepediaGameSelectorScreen.swift */; };
 		ED68A12B2EDB03D900C3DCC7 /* HyrulepediaBreathHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A12A2EDB03D900C3DCC7 /* HyrulepediaBreathHeaderSectionView.swift */; };
-		ED68A12D2EDB057900C3DCC7 /* HyrulepediaBreathLoaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A12C2EDB057900C3DCC7 /* HyrulepediaBreathLoaderSectionView.swift */; };
 		ED68A12F2EDB064400C3DCC7 /* HyrulepediaBreathInformationSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A12E2EDB062500C3DCC7 /* HyrulepediaBreathInformationSectionView.swift */; };
 		ED68A1322EDB073F00C3DCC7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ED68A1312EDB073F00C3DCC7 /* Kingfisher */; };
 		ED68A1342EDB07EB00C3DCC7 /* HyrulepediaBreathFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1332EDB07D600C3DCC7 /* HyrulepediaBreathFooterSectionView.swift */; };
@@ -38,12 +37,12 @@
 		ED68A1942EDCCA2300C3DCC7 /* HyrulepediaTearsInformationSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1902EDCCA2300C3DCC7 /* HyrulepediaTearsInformationSectionView.swift */; };
 		ED68A1952EDCCA2300C3DCC7 /* HyrulepediaTearsFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A18F2EDCCA2300C3DCC7 /* HyrulepediaTearsFooterSectionView.swift */; };
 		ED68A1962EDCCA2300C3DCC7 /* HyrulepediaTearsHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1922EDCCA2300C3DCC7 /* HyrulepediaTearsHeaderSectionView.swift */; };
-		ED68A1972EDCCA2300C3DCC7 /* HyrulepediaTearsLoaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1912EDCCA2300C3DCC7 /* HyrulepediaTearsLoaderSectionView.swift */; };
 		ED68A1992EDCCBAD00C3DCC7 /* HyrulepediaDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1982EDCCBAD00C3DCC7 /* HyrulepediaDetailScreen.swift */; };
 		ED68A1A02EDCCF9B00C3DCC7 /* HyrulepediaDetailHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A19D2EDCCF9B00C3DCC7 /* HyrulepediaDetailHeaderSectionView.swift */; };
 		ED68A1A12EDCCF9B00C3DCC7 /* HyrulepediaDetailInformationSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A19B2EDCCF9B00C3DCC7 /* HyrulepediaDetailInformationSectionView.swift */; };
 		ED68A1A42EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1A32EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift */; };
-		EDCB1A302EEB6E0400F93E28 /* HyrulepediaDetailLoaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB1A2F2EEB6E0400F93E28 /* HyrulepediaDetailLoaderSectionView.swift */; };
+		ED6CCAB82EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CCAB72EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift */; };
+		ED6CCABA2EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CCAB92EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift */; };
 		EDCB1A332EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB1A322EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift */; };
 		EDCB1A362EEB745900F93E28 /* HyrulepediaCrossFooterSectionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB1A352EEB745900F93E28 /* HyrulepediaCrossFooterSectionContract.swift */; };
 /* End PBXBuildFile section */
@@ -81,7 +80,6 @@
 		ED68A1252EDA110E00C3DCC7 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		ED68A1272EDB022900C3DCC7 /* HyrulepediaGameSelectorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaGameSelectorScreen.swift; sourceTree = "<group>"; };
 		ED68A12A2EDB03D900C3DCC7 /* HyrulepediaBreathHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaBreathHeaderSectionView.swift; sourceTree = "<group>"; };
-		ED68A12C2EDB057900C3DCC7 /* HyrulepediaBreathLoaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaBreathLoaderSectionView.swift; sourceTree = "<group>"; };
 		ED68A12E2EDB062500C3DCC7 /* HyrulepediaBreathInformationSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaBreathInformationSectionView.swift; sourceTree = "<group>"; };
 		ED68A1332EDB07D600C3DCC7 /* HyrulepediaBreathFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaBreathFooterSectionView.swift; sourceTree = "<group>"; };
 		ED68A1812EDCC4E600C3DCC7 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
@@ -91,14 +89,14 @@
 		ED68A18D2EDCC98C00C3DCC7 /* HyrulepediaTearsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaTearsScreen.swift; sourceTree = "<group>"; };
 		ED68A18F2EDCCA2300C3DCC7 /* HyrulepediaTearsFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaTearsFooterSectionView.swift; sourceTree = "<group>"; };
 		ED68A1902EDCCA2300C3DCC7 /* HyrulepediaTearsInformationSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaTearsInformationSectionView.swift; sourceTree = "<group>"; };
-		ED68A1912EDCCA2300C3DCC7 /* HyrulepediaTearsLoaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaTearsLoaderSectionView.swift; sourceTree = "<group>"; };
 		ED68A1922EDCCA2300C3DCC7 /* HyrulepediaTearsHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaTearsHeaderSectionView.swift; sourceTree = "<group>"; };
 		ED68A1982EDCCBAD00C3DCC7 /* HyrulepediaDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaDetailScreen.swift; sourceTree = "<group>"; };
 		ED68A19B2EDCCF9B00C3DCC7 /* HyrulepediaDetailInformationSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaDetailInformationSectionView.swift; sourceTree = "<group>"; };
 		ED68A19D2EDCCF9B00C3DCC7 /* HyrulepediaDetailHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaDetailHeaderSectionView.swift; sourceTree = "<group>"; };
 		ED68A1A32EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaDetailImageSectionView.swift; sourceTree = "<group>"; };
+		ED6CCAB72EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossLoaderSectionView.swift; sourceTree = "<group>"; };
+		ED6CCAB92EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossLoaderSectionContract.swift; sourceTree = "<group>"; };
 		EDAEA9812EDA06B2005B6E0B /* Hyrulepedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hyrulepedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDCB1A2F2EEB6E0400F93E28 /* HyrulepediaDetailLoaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaDetailLoaderSectionView.swift; sourceTree = "<group>"; };
 		EDCB1A322EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossFooterSectionView.swift; sourceTree = "<group>"; };
 		EDCB1A352EEB745900F93E28 /* HyrulepediaCrossFooterSectionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossFooterSectionContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,7 +222,6 @@
 			children = (
 				ED68A1332EDB07D600C3DCC7 /* HyrulepediaBreathFooterSectionView.swift */,
 				ED68A12E2EDB062500C3DCC7 /* HyrulepediaBreathInformationSectionView.swift */,
-				ED68A12C2EDB057900C3DCC7 /* HyrulepediaBreathLoaderSectionView.swift */,
 				ED68A12A2EDB03D900C3DCC7 /* HyrulepediaBreathHeaderSectionView.swift */,
 			);
 			path = Sections;
@@ -254,7 +251,6 @@
 			children = (
 				ED68A18F2EDCCA2300C3DCC7 /* HyrulepediaTearsFooterSectionView.swift */,
 				ED68A1902EDCCA2300C3DCC7 /* HyrulepediaTearsInformationSectionView.swift */,
-				ED68A1912EDCCA2300C3DCC7 /* HyrulepediaTearsLoaderSectionView.swift */,
 				ED68A1922EDCCA2300C3DCC7 /* HyrulepediaTearsHeaderSectionView.swift */,
 			);
 			path = Sections;
@@ -263,12 +259,20 @@
 		ED68A19E2EDCCF9B00C3DCC7 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				EDCB1A2F2EEB6E0400F93E28 /* HyrulepediaDetailLoaderSectionView.swift */,
 				ED68A1A32EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift */,
 				ED68A19B2EDCCF9B00C3DCC7 /* HyrulepediaDetailInformationSectionView.swift */,
 				ED68A19D2EDCCF9B00C3DCC7 /* HyrulepediaDetailHeaderSectionView.swift */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		ED6CCAB62EFB38DD0089F7A6 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				ED6CCAB92EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift */,
+				ED6CCAB72EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 		ED751CB72EE3045400066A1E /* Repository */ = {
@@ -306,6 +310,7 @@
 		EDCB1A312EEB738700F93E28 /* Cross */ = {
 			isa = PBXGroup;
 			children = (
+				ED6CCAB62EFB38DD0089F7A6 /* Loader */,
 				EDCB1A342EEB744500F93E28 /* Footer */,
 			);
 			path = Cross;
@@ -414,11 +419,10 @@
 				ED68A1942EDCCA2300C3DCC7 /* HyrulepediaTearsInformationSectionView.swift in Sources */,
 				ED68A1952EDCCA2300C3DCC7 /* HyrulepediaTearsFooterSectionView.swift in Sources */,
 				ED68A1962EDCCA2300C3DCC7 /* HyrulepediaTearsHeaderSectionView.swift in Sources */,
+				ED6CCABA2EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift in Sources */,
 				EDCB1A332EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift in Sources */,
-				ED68A1972EDCCA2300C3DCC7 /* HyrulepediaTearsLoaderSectionView.swift in Sources */,
 				ED68A1282EDB022900C3DCC7 /* HyrulepediaGameSelectorScreen.swift in Sources */,
 				ED68A1122EDA08AF00C3DCC7 /* HTTPMethod.swift in Sources */,
-				ED68A12D2EDB057900C3DCC7 /* HyrulepediaBreathLoaderSectionView.swift in Sources */,
 				ED68A1142EDA08CC00C3DCC7 /* Endpoint.swift in Sources */,
 				ED68A1822EDCC4E600C3DCC7 /* AppRoute.swift in Sources */,
 				ED68A12F2EDB064400C3DCC7 /* HyrulepediaBreathInformationSectionView.swift in Sources */,
@@ -427,11 +431,11 @@
 				ED68A1262EDA110E00C3DCC7 /* DependencyContainer.swift in Sources */,
 				ED68A18E2EDCC98C00C3DCC7 /* HyrulepediaTearsScreen.swift in Sources */,
 				ED68A1A42EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift in Sources */,
+				ED6CCAB82EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift in Sources */,
 				ED68A1A02EDCCF9B00C3DCC7 /* HyrulepediaDetailHeaderSectionView.swift in Sources */,
 				ED68A1A12EDCCF9B00C3DCC7 /* HyrulepediaDetailInformationSectionView.swift in Sources */,
 				ED68A1862EDCC4EC00C3DCC7 /* AppRootView.swift in Sources */,
 				ED68A1162EDA08E300C3DCC7 /* NetworkService.swift in Sources */,
-				EDCB1A302EEB6E0400F93E28 /* HyrulepediaDetailLoaderSectionView.swift in Sources */,
 				ED68A1222EDA0A5F00C3DCC7 /* HyrulepediaDataEntity.swift in Sources */,
 				ED68A1072EDA080600C3DCC7 /* HyrulepediaRepository.swift in Sources */,
 			);
