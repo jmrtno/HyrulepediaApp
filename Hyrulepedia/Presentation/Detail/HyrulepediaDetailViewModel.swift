@@ -8,7 +8,7 @@ import Foundation
 /// properties that drive SwiftUI views.
 
 @MainActor
-final class HyrulepediaDetailViewModel: ObservableObject {
+final class HyrulepediaDetailViewModel: ObservableObject, HyrulepediaCrossLoaderSectionContract {
     
     // MARK: - Published
     

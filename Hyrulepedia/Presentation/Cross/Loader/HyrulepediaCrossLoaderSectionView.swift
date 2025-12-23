@@ -1,9 +1,9 @@
 import Combine
 import SwiftUI
 
-struct HyrulepediaDetailLoaderSectionView: View {
+struct HyrulepediaCrossLoaderSectionView<VM: HyrulepediaCrossLoaderSectionContract>: View {
     // MARK: Modular variables
-    @EnvironmentObject var viewModel: HyrulepediaDetailViewModel
+    @EnvironmentObject var viewModel: VM
 
     // MARK: Environments & State
     @State private var degrees = 0.0
@@ -15,7 +15,7 @@ struct HyrulepediaDetailLoaderSectionView: View {
 }
 
 // MARK: - Private UI
-private extension HyrulepediaDetailLoaderSectionView {
+private extension HyrulepediaCrossLoaderSectionView {
     @ViewBuilder var loaderContainer: some View {
         if viewModel.isLoading {
             customLoader()
@@ -36,17 +36,17 @@ private extension HyrulepediaDetailLoaderSectionView {
             }
     }
 
-    func startInfiniteAnimation() {
-        guard !isAnimating else { return }
+    private func startInfiniteAnimation() {
+        guard !isAnimating else { return }  // Evitar múltiples animaciones simultáneas
         isAnimating = true
-        let interval: Double = 0.05
-        let increment: Double = 7
+        let interval: Double = 0.05  // Intervalo de actualización de la animación
+        let increment: Double = 7  // Incremento de grados por cada intervalo
 
         Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
             withAnimation(.easeIn(duration: interval)) {
                 degrees += increment
             }
-            /// Reset degrees to avoid overflow
+            // Reset degrees to avoid overflow
             if degrees >= 360 {
                 degrees -= 360
             }

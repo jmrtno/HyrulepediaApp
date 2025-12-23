@@ -8,7 +8,9 @@ import Combine
 /// properties that drive SwiftUI views.
 
 @MainActor
-final class HyrulepediaTearsViewModel: ObservableObject, HyrulepediaCrossFooterSectionContract {
+final class HyrulepediaTearsViewModel: ObservableObject,
+                                       HyrulepediaCrossFooterSectionContract,
+                                       HyrulepediaCrossLoaderSectionContract {
 
     // MARK: - Published
     
