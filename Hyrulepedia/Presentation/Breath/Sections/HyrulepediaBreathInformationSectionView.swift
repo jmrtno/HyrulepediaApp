@@ -110,30 +110,86 @@ private extension HyrulepediaBreathInformationSectionView {
                     .fontWeight(.bold)
                     .italic()
             }
-            HStack {
-                if item.edible ?? false || item.category == "materials" {
-                    HStack(spacing: 2) {
-                        ForEach(0..<(max(Int(item.heartsRecovered ?? 0.0), 1)), id: \.self) { index in
-                            Image(index < Int(item.heartsRecovered ?? 0.0) ? "heartFill" : "heart")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20)
-                        }
-                    }
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 7)
-                    .border(.white.opacity(0.3), width: 1)
-                    .padding(3)
-                    .background(.black)
+            VStack(alignment: .leading) {
+                HStack {
+                    itemEdible(item: item)
+                    itemCookingEffect(item: item)
                 }
-                
-                let cookingEffectText = (item.cookingEffect ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-                if !cookingEffectText.isEmpty {
-                    Text(cookingEffectText.capitalized)
-                        .italic()
+                itemProperties(item: item)
+            }
+        }
+    }
+
+    @ViewBuilder
+    func itemEdible(item: HyrulepediaDataEntity) -> some View {
+        if item.edible == true || item.category == "materials" {
+            heartRow(hearts: Double(item.heartsRecovered ?? 0.0))
+        }
+    }
+
+    @ViewBuilder
+    func heartRow(hearts: Double) -> some View {
+        let filledHearts = Int(hearts)
+        let hasHalfHeart = abs(hearts - Double(filledHearts) - 0.5) < 0.01
+        HStack(spacing: 2) {
+            if abs(hearts - 0.25) < 0.01 {
+                heartImage(image: "heartQuarter")
+            } else if hearts == 0.0 {
+                heartImage(image: "heart")
+            } else {
+                ForEach(0..<filledHearts, id: \.self) { _ in
+                    heartImage(image: "heartFill")
                 }
+                if hasHalfHeart {
+                    heartImage(image: "heartHalf")
+                }
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 7)
+        .border(.white.opacity(0.3), width: 1)
+        .padding(3)
+        .background(.black)
+    }
+    
+    func heartImage(image: String) -> some View {
+        Image(image)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 25)
+    }
+    
+    @ViewBuilder
+    func itemCookingEffect(item: HyrulepediaDataEntity) -> some View {
+        let cookingEffectText = (item.cookingEffect ?? "")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        if !cookingEffectText.isEmpty {
+            Text(cookingEffectText.capitalized)
+                .italic()
+        }
+    }
+
+    @ViewBuilder
+    func itemProperties(item: HyrulepediaDataEntity) -> some View {
+        let attack = item.properties?.attack ?? 0
+        let defense = item.properties?.defense ?? 0
+        HStack {
+            if attack != 0 {
+                Image("attackIcon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25)
+                Text("\(attack)")
+                    .italic()
+            }
+            if defense != 0 {
+                Image("defenseIcon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25)
+                Text("\(defense)")
+                    .italic()
             }
         }
     }
 }
-

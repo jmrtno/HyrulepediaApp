@@ -26,12 +26,15 @@ class HyrulepediaDataEntity: Codable, Identifiable {
     let heartsRecovered: Float?
     /// Cooking effect of the entity (if applicable).
     let cookingEffect: String?
+    /// Damage added when fused with a weapon.
+    let fuseAttackPower: Int?
     
     enum CodingKeys: String, CodingKey {
         case id, name, category, image, description, drops, dlc, properties, edible
         case commonLocations = "common_locations"
         case heartsRecovered = "hearts_recovered"
         case cookingEffect = "cooking_effect"
+        case fuseAttackPower = "fuse_attack_power"
     }
     
     /// Initializes a new `HyrulepediaDataEntity` with all properties.
@@ -49,6 +52,7 @@ class HyrulepediaDataEntity: Codable, Identifiable {
     ///   - edible: Indicates if the entity is edible.
     ///   - heartsRecovered: Amount of hearts recovered when consumed (if applicable).
     ///   - cookingEffect: Cooking effect of the entity (if applicable).
+    ///   - fuseAttackPower: Damage added when fused with a weapon.
     public init(id: Int,
                 name: String,
                 category: String,
@@ -60,7 +64,8 @@ class HyrulepediaDataEntity: Codable, Identifiable {
                 properties: PropertiesEntity? = nil,
                 edible: Bool? = false,
                 heartsRecovered: Float? = 0.0,
-                cookingEffect: String? = "") {
+                cookingEffect: String? = "",
+                fuseAttackPower: Int?) {
         self.id = id
         self.name = name
         self.category = category
@@ -73,6 +78,7 @@ class HyrulepediaDataEntity: Codable, Identifiable {
         self.edible = edible
         self.heartsRecovered = heartsRecovered
         self.cookingEffect = cookingEffect
+        self.fuseAttackPower = fuseAttackPower
     }
     
     /// Default initializer with empty or zeroed values.
@@ -89,6 +95,7 @@ class HyrulepediaDataEntity: Codable, Identifiable {
         heartsRecovered = 0.0
         edible = false
         cookingEffect = ""
+        fuseAttackPower = 0
     }
 }
 

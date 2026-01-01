@@ -47,7 +47,7 @@ private extension HyrulepediaDetailInformationSectionView {
             }
             .scrollTargetLayout()
         }
-        .contentMargins(.horizontal, 45, for: .scrollContent)
+        .contentMargins(.horizontal, 40, for: .scrollContent)
         .scrollTargetBehavior(.viewAligned)
     }
 

@@ -29,9 +29,10 @@ public struct HyrulepediaTearsScreen: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(viewModel.listCategory.capitalized)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                    .font(.custom("HyliaSerifBeta-Regular", size: 30, relativeTo: .title))
+                    .foregroundStyle(Color.customWhite)
+                    .shadow(color: .customGold.opacity(0.6), radius: 3)
+                    .shadow(color: .customGold.opacity(0.4), radius: 5)
             }
         }
         .task {
