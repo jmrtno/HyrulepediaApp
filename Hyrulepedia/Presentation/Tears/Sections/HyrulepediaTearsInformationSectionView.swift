@@ -83,7 +83,7 @@ private extension HyrulepediaTearsInformationSectionView {
                 .frame(height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .overlay(
-                    Text("#" + String(item.id))
+                    Text("# \(item.id)")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(8)
@@ -111,29 +111,133 @@ private extension HyrulepediaTearsInformationSectionView {
                     .fontWeight(.bold)
                     .italic()
             }
-            HStack {
-                if item.edible ?? false || item.category == "materials" {
-                    HStack(spacing: 2) {
-                        ForEach(0..<(max(Int(item.heartsRecovered ?? 0.0), 1)), id: \.self) { index in
-                            Image(index < Int(item.heartsRecovered ?? 0.0) ? "heartFill" : "heart")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20)
-                        }
-                    }
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 7)
-                    .border(.white.opacity(0.3), width: 1)
-                    .padding(3)
-                    .background(.black)
+            VStack(alignment: .leading) {
+                HStack {
+                    itemEdible(item: item)
+                    itemCookingEffect(item: item)
                 }
-                
-                let cookingEffectText = (item.cookingEffect ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-                if !cookingEffectText.isEmpty {
-                    Text(cookingEffectText.capitalized)
+                itemFuseAttack(item: item)
+                itemProperties(item: item)
+            }
+        }
+    }
+
+    @ViewBuilder
+    func itemEdible(item: HyrulepediaDataEntity) -> some View {
+        if item.edible == true || item.category == "materials" {
+            heartRow(hearts: Double(item.heartsRecovered ?? 0.0))
+        }
+    }
+
+    @ViewBuilder
+    func heartRow(hearts: Double) -> some View {
+        let filledHearts = Int(hearts)
+        let hasHalfHeart = abs(hearts - Double(filledHearts) - 0.5) < 0.01
+        HStack(spacing: 2) {
+            if abs(hearts - 0.25) < 0.01 {
+                heartImage(image: "heartQuarter")
+            } else if hearts == 0.0 {
+                heartImage(image: "heart")
+            } else {
+                ForEach(0..<filledHearts, id: \.self) { _ in
+                    heartImage(image: "heartFill")
+                }
+                if hasHalfHeart {
+                    heartImage(image: "heartHalf")
+                }
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 7)
+        .border(.white.opacity(0.3), width: 1)
+        .padding(3)
+        .background(.black)
+    }
+    
+    func heartImage(image: String) -> some View {
+        Image(image)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 25)
+    }
+    
+    @ViewBuilder
+    func itemCookingEffect(item: HyrulepediaDataEntity) -> some View {
+        let rawText = (item.cookingEffect ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+
+        let cleanedText: String = {
+            guard !rawText.isEmpty else { return "" }
+            guard rawText.localizedCaseInsensitiveContains("duration") else { return rawText }
+            if let range = rawText.range(of: "[0-9]", options: .regularExpression) {
+                return String(rawText[range.lowerBound...]).trimmingCharacters(in: .whitespacesAndNewlines)
+            } else {
+                return rawText
+            }
+        }()
+
+        if !cleanedText.isEmpty {
+            if rawText.localizedCaseInsensitiveContains("duration") {
+                HStack(spacing: 2) {
+                    Image("durationIcon")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20)
+                    Text(cleanedText)
+                        .bold()
+                        .foregroundStyle(Color.mintGreen)
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 7)
+                .border(.white.opacity(0.3), width: 1)
+                .padding(3)
+                .background(.black)
+            } else {
+                Text(rawText.capitalized)
+                    .italic()
+            }
+        }
+    }
+
+    @ViewBuilder
+    func itemProperties(item: HyrulepediaDataEntity) -> some View {
+        let props = item.properties
+        VStack(alignment: .leading) {
+            if let type = props?.type, !type.isEmpty {
+                Text(type.capitalized)
+                    .italic()
+            }
+            if let effect = props?.effect, !effect.isEmpty {
+                Text("Effect: \(effect.capitalized)")
+                    .italic()
+            }
+            HStack {
+                let attack = props?.attack ?? 0
+                let defense = props?.defense ?? 0
+                if attack != 0 {
+                    Image("attackIcon")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25)
+                    Text("\(attack)")
+                        .italic()
+                }
+                if defense != 0 {
+                    Image("defenseIcon")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25)
+                    Text("\(defense)")
                         .italic()
                 }
             }
+        }
+    }
+    
+    @ViewBuilder
+    func itemFuseAttack(item: HyrulepediaDataEntity) -> some View {
+        if let fuseAttack = item.fuseAttackPower {
+            Text("Fusion Attack: +\(fuseAttack)")
+                .italic()
         }
     }
 }
