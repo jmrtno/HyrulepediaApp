@@ -43,6 +43,7 @@
 		ED68A1A42EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68A1A32EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift */; };
 		ED6CCAB82EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CCAB72EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift */; };
 		ED6CCABA2EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CCAB92EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift */; };
+		ED6CCAC02F06B80B0089F7A6 /* HyliaSerifBeta-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED6CCABF2F06B80B0089F7A6 /* HyliaSerifBeta-Regular.otf */; };
 		EDCB1A332EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB1A322EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift */; };
 		EDCB1A362EEB745900F93E28 /* HyrulepediaCrossFooterSectionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB1A352EEB745900F93E28 /* HyrulepediaCrossFooterSectionContract.swift */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,7 @@
 		ED68A1A32EDCCFAA00C3DCC7 /* HyrulepediaDetailImageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaDetailImageSectionView.swift; sourceTree = "<group>"; };
 		ED6CCAB72EFB39760089F7A6 /* HyrulepediaCrossLoaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossLoaderSectionView.swift; sourceTree = "<group>"; };
 		ED6CCAB92EFB39C50089F7A6 /* HyrulepediaCrossLoaderSectionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossLoaderSectionContract.swift; sourceTree = "<group>"; };
+		ED6CCABF2F06B80B0089F7A6 /* HyliaSerifBeta-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HyliaSerifBeta-Regular.otf"; sourceTree = "<group>"; };
 		EDAEA9812EDA06B2005B6E0B /* Hyrulepedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hyrulepedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCB1A322EEB739600F93E28 /* HyrulepediaCrossFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossFooterSectionView.swift; sourceTree = "<group>"; };
 		EDCB1A352EEB745900F93E28 /* HyrulepediaCrossFooterSectionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyrulepediaCrossFooterSectionContract.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		ED68A0F82EDA070000C3DCC7 /* Hyrulepedia */ = {
 			isa = PBXGroup;
 			children = (
+				ED6CCABB2F069ED40089F7A6 /* Font */,
 				ED68A1032EDA07F200C3DCC7 /* Data */,
 				ED68A0FC2EDA07CE00C3DCC7 /* Domain */,
 				ED68A1082EDA080E00C3DCC7 /* Presentation */,
@@ -275,6 +278,14 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		ED6CCABB2F069ED40089F7A6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				ED6CCABF2F06B80B0089F7A6 /* HyliaSerifBeta-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		ED751CB72EE3045400066A1E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6CCAC02F06B80B0089F7A6 /* HyliaSerifBeta-Regular.otf in Resources */,
 				ED68A0FB2EDA070000C3DCC7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +587,7 @@
 				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hyrulepedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -608,6 +621,7 @@
 				DEVELOPMENT_TEAM = VZ82ZJHYB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hyrulepedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
